@@ -1,3 +1,11 @@
+body {
+    background-image: radial-gradient(
+        #c5d951ff,
+        #79b946ff,
+        #218d44ff
+    );
+    /* background-image: url(/assets/images/fondo.jpg); */
+}
 /* CSS HEX */
 /* --pacific-blue: #00B0C9ff;
 --june-bud: #C5D951ff;
