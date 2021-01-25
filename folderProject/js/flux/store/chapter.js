@@ -1,4 +1,4 @@
-export class chapter {
+export class Chapter {
     constructor (chapterFromAPI) {
         
     }

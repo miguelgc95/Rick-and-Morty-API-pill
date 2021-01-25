@@ -16,3 +16,13 @@ header img {
 .portal{
     max-height: 50vh;
 }
+
+/* .gif{
+    width: 100%;
+} */
+
+.gifs-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}

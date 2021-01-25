@@ -1,3 +1,5 @@
-import { chapterRequest } from './flux/action/requests.js'
 
-chapterRequest();
+import { chapterRequest, seasonRequest } from "./flux/actions/requests.js";
+
+let seasonCounter = 1;
+seasonRequest(seasonCounter)
