@@ -31,9 +31,11 @@ export function renderCharacterBasics(node) {
 
 export function renderTheCharacter(characterObject) {
     characterObject.changeTitle;
-    console.log(characterObject);
     document.getElementById("episode").innerHTML = '';
     let node = characterObject.htmlForCharacter;
-    console.log(node);
     document.getElementById("character").appendChild(node);
+    if (characterObject.name ==="Evil Morty") {
+        console.log("entro");
+        document.getElementById("character").insertAdjacentHTML('beforebegin', `<audio src='/assets/audio/Evil-morty-cut.m4a' autoplay="autoplay"></audio>`)
+    }
 }
