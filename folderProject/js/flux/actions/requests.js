@@ -1,5 +1,6 @@
 import { Episode } from "../store/Episode.js";
 import { Season } from "../store/Season.js";
+import { Character } from "../store/Character.js"
 import { rendersidebarContent } from "../view/render.js";
 
 export function chapterRequest (url) {
@@ -24,5 +25,19 @@ export function seasonRequest(seasonCounter) {
         return response;
     }).catch(error => {
         console.log("zacaborbalon", error);
+    })
+}
+
+export function requestcharacterFromAnEpisode(thisEpisode) {
+    let requestCharacters = thisEpisode.characters.map(character => {
+        return axios.get(character)
+    })
+    axios.all(requestCharacters).then((response) => {
+        response.forEach(character => {
+            let newCharacter = new Character(character.data);
+            newCharacter.htmlForChapter
+        });
+    }).catch(error => {
+        console.log(error);
     })
 }

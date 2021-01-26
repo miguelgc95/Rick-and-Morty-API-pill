@@ -9,6 +9,12 @@ header{
     justify-content: center;
 }
 
+main{
+    width: 70%;
+    position: absolute;
+    right: 0;
+}
+
 .flex-column{
     display: flex;
     flex-direction: column;
@@ -17,7 +23,7 @@ header{
 }
 
 header img {
-    max-width: 50vw;
+    max-width: 35vw;
 }
 
 .portal{
@@ -32,6 +38,9 @@ header img {
     display: flex;
     width: 100%;
     justify-content: space-around;
+}
+
+#episode{
 }
 
 .sidebar{

@@ -1,4 +1,5 @@
 
+import { requestcharacterFromAnEpisode } from "../actions/requests.js";
 import { changeTitle } from "../view/render.js";
 
 export class Episode {
@@ -13,21 +14,11 @@ export class Episode {
     get html() {
         this.createNewTitle;
         this.requestCharacters;
+        requestcharacterFromAnEpisode(this)
     }
 
     get createNewTitle(){
-        let newTitle = `${this.name}(${this.air_date}, ${this.episode})`;
+        let newTitle = `${this.name}${"<br></br>"}(${this.air_date}, ${this.episode})`;
         changeTitle(newTitle);
-    }
-
-    get requestCharacters() {
-        let requestCharacters = this.characters.map(character => {
-            return axios.get(character)
-        })
-        axios.all(requestCharacters).then((response) => {
-            console.log(response);
-        }).catch(error => {
-            console.log(error);
-        })
     }
 }

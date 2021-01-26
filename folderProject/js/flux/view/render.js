@@ -15,9 +15,14 @@ export function showSeasonChapters(event) {
 
 export function showSpecificChapter(event) {
     let url = event.target.getAttribute("url");
-    chapterRequest(url)
+    chapterRequest(url);
+    document.getElementById("episode").innerHTML = '';
 }
 
 export function changeTitle(newTitle) {
     document.getElementsByTagName("h1")[0].innerHTML = newTitle;
+}
+
+export function renderCharacterBasics(node) {
+    document.getElementById("episode").appendChild(node)
 }
