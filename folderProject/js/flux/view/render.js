@@ -17,6 +17,8 @@ export function showSpecificChapter(event) {
     let url = event.target.getAttribute("url");
     chapterRequest(url);
     document.getElementById("episode").innerHTML = '';
+    document.getElementById("character").innerHTML = '';
+    document.getElementsByClassName("center")[0].classList.add("hidden")
 }
 
 export function changeTitle(newTitle) {
@@ -33,5 +35,5 @@ export function renderTheCharacter(characterObject) {
     document.getElementById("episode").innerHTML = '';
     let node = characterObject.htmlForCharacter;
     console.log(node);
-    document.getElementById("episode").appendChild(node);
+    document.getElementById("character").appendChild(node);
 }

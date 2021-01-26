@@ -176,3 +176,21 @@ header img {
 ::-webkit-scrollbar-track {
     border-radius: 10px;
 }
+
+#character{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+}
+
+.character-wrapper{
+    display: flex;
+}
+
+.complete-character-info-wrapper{
+    font-size: 2rem;
+    align-items: flex-start;
+    padding-left: 30px;
+}

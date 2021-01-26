@@ -23,7 +23,6 @@ export class Character {
     get htmlForCharacter() {
 
         var $characterWrapper = document.createElement('div');
-        var $nameTitle = document.createElement('span');
         var $img = document.createElement('img');
         var $divInfo = document.createElement('div');
         var $status = document.createElement('span');
@@ -34,19 +33,18 @@ export class Character {
         $img.setAttribute("alt", "image");
         $img.classList.add("character-image");
         $divInfo.classList.add("complete-character-info-wrapper");
-        $nameTitle.innerHTML=this.name;
         $status.innerHTML = `Status: ${this.status}`;
         $specie.innerHTML = `Specie: ${this.specie}`;
         $gender.innerHTML = `Gender: ${this.gender}`,
-        $origin.innerHTML = `Origin: ${this.origin}`;
+        $origin.innerHTML = `Origin: ${this.origin.name}`;
         $divInfo.appendChild($status);
         $divInfo.appendChild($specie);
         $divInfo.appendChild($gender);
         $divInfo.appendChild($origin);
-        $characterWrapper.appendChild($nameTitle)
+        $divInfo.classList.add("flex-column");
         $characterWrapper.appendChild($img)
         $characterWrapper.appendChild($divInfo);
-        $characterWrapper.classList.add("flex-column");
+        $characterWrapper.classList.add("character-wrapper");
         console.log($characterWrapper);
         return $characterWrapper
     }
