@@ -10,7 +10,7 @@ export class Character {
         this.location = characterAPI.location;
         this.name = characterAPI.name;
         this.origin = characterAPI.origin;
-        this.specie = characterAPI.spacies;
+        this.specie = characterAPI.species;
         this.status = characterAPI.status;
     }
 
@@ -29,9 +29,12 @@ export class Character {
         $status.innerHTML = this.status;
         var $specie = document.createElement('span');
         $specie.innerHTML = this.specie;
-        $divInfo.appendChild($name);
+        var $separator = document.createElement('span');
+        $separator.innerHTML = ` / `;
         $divInfo.appendChild($status);
+        $divInfo.appendChild($separator);
         $divInfo.appendChild($specie);
+        $chapterWrapper.appendChild($name)
         $chapterWrapper.appendChild($img)
         $chapterWrapper.appendChild($divInfo);
         renderCharacterBasics($chapterWrapper);

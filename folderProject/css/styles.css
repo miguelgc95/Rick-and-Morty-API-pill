@@ -30,6 +30,15 @@ main{
     overflow: auto;
 }
 
+.main-strech{
+    height: 70%;
+    width: 70%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+}
+
 .flex-column{
     display: flex;
     flex-direction: column;
@@ -100,14 +109,14 @@ header img {
     border-radius: 0.5rem;
     position: absolute;
     bottom: 30%;
-    left: 5%;
+    left: 4%;
     font-size: 2rem;
     text-align: center;
     transition: left 0.7s;
 }
 
 .checkbox:checked ~ .menu {
-    left: 30%;
+    left: 29%;
     border-radius: 0 0.5rem 0.5rem 0;
 }
 
@@ -133,4 +142,37 @@ header img {
 #episode{
     display: grid;
     grid-template-columns:1fr 1fr 1fr;
+}
+
+.character{
+    padding: 30px 0 30px 0;
+    font-size: 2rem;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+    width:32px;
+}
+
+::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+    display: none;
+}
+
+::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-image: url(/assets/images/pickle-small.png);
+    background-repeat: no-repeat;
+    background-size: 30px auto;
+    background-position: 50%;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
 }
