@@ -1,4 +1,5 @@
-import { renderCharacterBasics } from "../view/render.js";
+import { renderCharacterBasics, renderTheCharacter } from "../view/render.js";
+import { changeTitle } from "../view/render.js";
 
 export class Character {
     constructor (characterAPI) {
@@ -12,6 +13,42 @@ export class Character {
         this.origin = characterAPI.origin;
         this.specie = characterAPI.species;
         this.status = characterAPI.status;
+    }
+
+    get changeTitle() {
+        let newTitle = this.name
+        changeTitle(newTitle);
+    }
+
+    get htmlForCharacter() {
+
+        var $characterWrapper = document.createElement('div');
+        var $nameTitle = document.createElement('span');
+        var $img = document.createElement('img');
+        var $divInfo = document.createElement('div');
+        var $status = document.createElement('span');
+        var $specie = document.createElement('span');
+        var $gender = document.createElement('span');
+        var $origin = document.createElement('span');
+        $img.setAttribute("src", this.image);
+        $img.setAttribute("alt", "image");
+        $img.classList.add("character-image");
+        $divInfo.classList.add("complete-character-info-wrapper");
+        $nameTitle.innerHTML=this.name;
+        $status.innerHTML = `Status: ${this.status}`;
+        $specie.innerHTML = `Specie: ${this.specie}`;
+        $gender.innerHTML = `Gender: ${this.gender}`,
+        $origin.innerHTML = `Origin: ${this.origin}`;
+        $divInfo.appendChild($status);
+        $divInfo.appendChild($specie);
+        $divInfo.appendChild($gender);
+        $divInfo.appendChild($origin);
+        $characterWrapper.appendChild($nameTitle)
+        $characterWrapper.appendChild($img)
+        $characterWrapper.appendChild($divInfo);
+        $characterWrapper.classList.add("flex-column");
+        console.log($characterWrapper);
+        return $characterWrapper
     }
 
     get htmlForChapter() {
@@ -37,6 +74,9 @@ export class Character {
         $chapterWrapper.appendChild($name)
         $chapterWrapper.appendChild($img)
         $chapterWrapper.appendChild($divInfo);
+        $chapterWrapper.addEventListener("click", ()=> {
+            renderTheCharacter(this)
+        });
         renderCharacterBasics($chapterWrapper);
     }
 }

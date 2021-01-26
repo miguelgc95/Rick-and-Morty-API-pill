@@ -26,3 +26,12 @@ export function changeTitle(newTitle) {
 export function renderCharacterBasics(node) {
     document.getElementById("episode").appendChild(node)
 }
+
+export function renderTheCharacter(characterObject) {
+    characterObject.changeTitle;
+    console.log(characterObject);
+    document.getElementById("episode").innerHTML = '';
+    let node = characterObject.htmlForCharacter;
+    console.log(node);
+    document.getElementById("episode").appendChild(node);
+}
