@@ -20,9 +20,10 @@ export class Season {
 
     get renderChapters(){
         let $divWithChapters = document.createElement('div');
-        $divWithChapters.classList.add("flex-column", "hidden")
+        $divWithChapters.classList.add("chapters", "flex-column", "hidden")
         this.chapters.forEach(chapter => {
             var $chapter = document.createElement('span');
+            $chapter.setAttribute("url", chapter.url)
             $chapter.innerHTML = chapter.name;
             $chapter.addEventListener("click", showSpecificChapter);
             $divWithChapters.appendChild($chapter);

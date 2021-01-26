@@ -1,13 +1,14 @@
-import { Season } from "../store/season.js";
-import { renderChaptersToSidebar, rendersidebarContent } from "../view/render.js";
+import { Episode } from "../store/Episode.js";
+import { Season } from "../store/Season.js";
+import { rendersidebarContent } from "../view/render.js";
 
-export function chapterRequest () {
-    const url = `https://rickandmortyapi.com/api/episode?page=1`;
-    axios.get(url)
+export function chapterRequest (url) {
+    return axios.get(url)
     .then(response => {
-        console.log(response);
-    }).catch(e => {
-        console.log(e);
+        let episode = new Episode(response.data);
+        episode.html
+    }).catch(error => {
+        console.log("capitulo de mierda", error);
     })
 }
 
