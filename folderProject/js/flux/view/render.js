@@ -2,7 +2,7 @@ import { chapterRequest } from "../actions/requests.js";
 
 
 export function rendersidebarContent (seasonDiv) {
-    document.getElementsByClassName("sidebar")[0].appendChild(seasonDiv);
+    document.getElementsByClassName("sidebar")[1].appendChild(seasonDiv);
 }
 
 export function renderChaptersToSidebar (where, what) {

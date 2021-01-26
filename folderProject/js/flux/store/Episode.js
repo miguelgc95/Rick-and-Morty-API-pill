@@ -18,7 +18,7 @@ export class Episode {
     }
 
     get createNewTitle(){
-        let newTitle = `${this.name}${"<br></br>"}(${this.air_date}, ${this.episode})`;
+        let newTitle = `${this.name} (${this.air_date}, ${this.episode})`;
         changeTitle(newTitle);
     }
 }

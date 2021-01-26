@@ -6,17 +6,28 @@ body{
     height: 100vh;
 }
 
+.center{
+    width: 30%;
+    opacity: .8;
+    position: absolute;
+    left: 35%;
+    bottom: 20%;
+    z-index: -999;
+
+}
+
 header{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 30%;
 }
 
 main{
-    width: 70%;
-    position: absolute;
-    right: 0;
+    height: 70%;
+    top: 0;
+    overflow: auto;
 }
 
 .flex-column{
@@ -34,63 +45,46 @@ header img {
     max-height: 50vh;
 }
 
-/* .gif{
-    width: 100%;
-} */
-
 .gifs-wrapper{
     display: flex;
     width: 100%;
     justify-content: space-around;
 }
 
-/* #episode{
-} */
-
-.sidebar{
-    background-image: radial-gradient(
-        #B7D8EBff,
-        #C5D951ff,
-        #D3DF55ff
-    );
-    height: calc(100vh - 25vh);
+.left-panel{
     width: 30%;
+    height: 70%;
     position: absolute;
     bottom: 0;
+    left: -30%;
+    transition: left 0.4s;
+    justify-content: space-around;
+}
+
+.sidebar{
+    color: cornsilk;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: auto;
 }
 
-.menu{
-    width: 2.2rem;
-    height: 2.7rem;
-    background: coral;
-    border-radius: 0.5rem;
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    font-size: 2rem;
-    text-align: center;
-    transition: left 0.7s;
+.width-control{
+    width: 100%;
+    justify-self: center;
 }
 
-.checkbox:checked ~ .menu {
-    left: 40%;
-    border-radius: 0 0.5rem 0.5rem 0;
-}
 
-.left-panel{
-    width: 40%;
-    height: 100%;
-    position: absolute;
+.left-panel::after {
+    content: "";
+    background-image: url(/assets/images/PORTADA_ESTRELLAS.jpg);
+    opacity: .3;
     top: 0;
-    left: -40%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: left 0.4s;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
 }
 
 .checkbox:checked ~ .left-panel {
@@ -100,7 +94,43 @@ header img {
 .checkbox {
     display: none;
 }
+.menu{
+    width: 2.2rem;
+    height: 2.7rem;
+    border-radius: 0.5rem;
+    position: absolute;
+    bottom: 30%;
+    left: 5%;
+    font-size: 2rem;
+    text-align: center;
+    transition: left 0.7s;
+}
+
+.checkbox:checked ~ .menu {
+    left: 30%;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.bold-and-pointer:hover{
+    font-size: 1.55rem;
+    cursor: pointer;
+}
+
+.boldito-and-pointer:hover{
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 1px solid;
+}
+
+.chapters{
+    font-size: 1.3rem;
+}
 
 .hidden{
     display: none;
+}
+
+#episode{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
 }

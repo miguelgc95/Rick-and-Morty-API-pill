@@ -11,6 +11,7 @@ export class Season {
         var $myDiv = document.createElement('div');
         $myDiv.classList.add("season", "flex-column");
         var $seasonH2 = document.createElement('h2');
+        $seasonH2.classList.add("bold-and-pointer")
         $seasonH2.innerHTML = `Season ${this.seasonId}`;
         $seasonH2.addEventListener("click", showSeasonChapters);
         $myDiv.appendChild($seasonH2);
@@ -23,6 +24,7 @@ export class Season {
         $divWithChapters.classList.add("chapters", "flex-column", "hidden")
         this.chapters.forEach(chapter => {
             var $chapter = document.createElement('span');
+            $chapter.classList.add("boldito-and-pointer")
             $chapter.setAttribute("url", chapter.url)
             $chapter.innerHTML = chapter.name;
             $chapter.addEventListener("click", showSpecificChapter);
