@@ -30,13 +30,18 @@ main{
     overflow: auto;
 }
 
-.main-strech{
+#episode{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    overflow: auto;
     height: 70%;
-    width: 70%;
     position: absolute;
     bottom: 0;
     right: 0;
-    overflow: auto;
+}
+
+.main-strech{
+    width: 70%;
 }
 
 .flex-column{
@@ -145,11 +150,6 @@ h1{
 
 .hidden{
     display: none;
-}
-
-#episode{
-    display: grid;
-    grid-template-columns:1fr 1fr 1fr;
 }
 
 .character{
