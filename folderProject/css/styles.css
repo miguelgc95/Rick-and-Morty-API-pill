@@ -70,12 +70,17 @@ header img {
     justify-content: space-around;
 }
 
+h1{
+    margin: 0;
+}
+
 .sidebar{
     color: cornsilk;
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .width-control{
