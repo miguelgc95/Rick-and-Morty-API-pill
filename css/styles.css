@@ -214,3 +214,12 @@ h1{
 .season{
     width: 100%;
 }
+
+.dral{
+    position: relative;
+}
+
+.dral-child{
+    position: absolute;
+    z-index: 9999999;
+}
