@@ -91,7 +91,7 @@ h1{
 
 .left-panel::after {
     content: "";
-    background-image: url(/assets/images/PORTADA_ESTRELLAS.jpg);
+    background-image: url(assets/images/PORTADA_ESTRELLAS.jpg);
     opacity: .3;
     top: 0;
     left: 0;
