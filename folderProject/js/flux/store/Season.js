@@ -19,14 +19,17 @@ export class Season {
         return $myDiv
     }
 
+
     get renderChapters(){
         let $divWithChapters = document.createElement('div');
-        $divWithChapters.classList.add("chapters", "flex-column", "hidden")
+        $divWithChapters.classList.add("chapters", "flex-column", "hidden");
+        let counter = 1;
         this.chapters.forEach(chapter => {
             var $chapter = document.createElement('span');
             $chapter.classList.add("boldito-and-pointer")
             $chapter.setAttribute("url", chapter.url)
-            $chapter.innerHTML = chapter.name;
+            $chapter.innerHTML = counter+"."+chapter.name;
+            counter++;
             $chapter.addEventListener("click", showSpecificChapter);
             $divWithChapters.appendChild($chapter);
         });

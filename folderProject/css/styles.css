@@ -132,7 +132,10 @@ header img {
 }
 
 .chapters{
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    align-items: flex-start;
+    width: 100%;
+    padding-left: 50px;
 }
 
 .hidden{
@@ -201,4 +204,8 @@ header img {
     font-size: 2rem;
     align-items: flex-start;
     padding-left: 30px;
+}
+
+.season{
+    width: 100%;
 }
