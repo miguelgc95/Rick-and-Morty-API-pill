@@ -165,11 +165,19 @@ header img {
     height: 10px;
 }
 
-::-webkit-scrollbar-thumb {
+.sidebar::-webkit-scrollbar-thumb {
     background-image: url(/assets/images/pickle-small.png);
     background-repeat: no-repeat;
-    background-size: 30px auto;
+    background-size: 30px 100px;
     background-position: 50%;
+    border-radius: 20px;
+}
+
+#episode::-webkit-scrollbar-thumb {
+    background-image: url(/assets/images/pickle-small.png);
+    background-repeat: no-repeat;
+    /* background-size: 30px auto; */
+    /* background-position: 50%; */
     border-radius: 20px;
 }
 
